@@ -1,7 +1,89 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>if u want tooderr the cake clickon order button right below </h1>
-<a href="{% url "order" %}">order</a>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        cream n fluff </title>
+
+    <style>
+        body {
+
+            padding: 30px;
+
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav {
+            float: right;
+            position:fixed;
+            right:0;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav a {
+           
+            
+            padding: 25px 25px;
+            text-align: center;
+
+            color: #f2f2f2;
+
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+    
+
+        .img-wrapper {
+            display: grid;
+  height: 100vh;
+            
+        }
+        .img-wrapper div {
+  grid-column: 1;
+  grid-row: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--gray);
+  transition: opacity 0.05s;
+}
+    </style>
+    <script>
+        const checkpoint = 60;
+ 
+ window.addEventListener("scroll", () => {
+   const currentScroll = window.pageYOffset;
+   if (currentScroll <= checkpoint) {
+     opacity = 1 - currentScroll / checkpoint;
+   } else {
+     opacity = 0;
+   }
+   document.querySelector(".front").style.opacity = opacity;
+ });
+        </script>
+</head>
+
+<body bgcolor="black">
+    <!-- <h1>if u want tooderr the cake clickon order button right below </h1>
+<a href="{% url "order" %}">order</a> -->
+    <div class="nav">
+        <a href="#login">Login</a>
+        <a href="#reg">Register</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="img-wrapper">
+        <div class="picc" style="background-image: url(cake1.png);"></div>
+        <div class="front" style="background-image: url(main.jpeg);"></div>
+    </div>
 </body>
+
 </html>
